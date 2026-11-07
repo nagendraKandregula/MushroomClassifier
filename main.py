@@ -77,7 +77,7 @@ plt.title("Mushroom Class Distribution")
 plt.xlabel("Class")
 plt.ylabel("Number of Mushrooms")
 
-#plt.show()
+plt.show()
 
 # Independent variables
 X = df.drop("class", axis=1)
