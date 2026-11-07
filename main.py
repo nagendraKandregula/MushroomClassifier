@@ -372,3 +372,27 @@ for name, model in trained_models.items():
     )
 
     print(f"Saved: {filename}")
+
+# Combine test features and actual target
+test_data = X_test.copy()
+
+test_data["class"] = y_test
+
+# Save CSV
+test_data.to_csv(
+    "test_data.csv",
+    index=False
+)
+
+print("Test dataset saved successfully!")
+
+results_df.to_csv(
+    "outputs/model_comparison.csv"
+)
+
+print("Model comparison saved!")
+
+OneHotEncoder(
+    handle_unknown="ignore",
+    sparse_output=False
+)

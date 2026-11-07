@@ -92,7 +92,7 @@ selected_model_name = st.sidebar.selectbox(
 )
 
 uploaded_file = st.sidebar.file_uploader(
-    "Upload Test Dataset (CSV)",
+    "Upload Test Dataset (CSV) with no headers",
     type=["csv"]
 )
 
