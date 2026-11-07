@@ -121,12 +121,10 @@ if uploaded_file is not None:
         # Validate dataset columns
         required_columns = FEATURES + ["class"]
 
-        missing_columns = [
+        if missing_columns := [
             col for col in required_columns
             if col not in data.columns
-        ]
-
-        if missing_columns:
+        ]:
             st.error(
                 f"Missing required columns: {missing_columns}"
             )
